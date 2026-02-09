@@ -1,0 +1,7 @@
+import csv
+
+with open("DAY 7/students.csv", newline="") as csvfile:
+	reader = csv.DictReader(csvfile)
+	for row in reader:
+		if row["Status"] == "Pass":
+			print(row["Name"])
